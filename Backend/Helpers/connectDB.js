@@ -1,14 +1,14 @@
 const { MongoClient } = require("mongodb");
-/* Notice all the variable such as: .uri, dbName,,db,Client  are all global 
+/* Notice all the variable such as: .uri, dbName,db,Client  are all global 
 (Outside of getdatabase function)why? because  we don't wat to create a new mongoclient or db each time
 getDatabase imported and called from other files, so imake these variable global  */
 
 
 /*to connect the databbase , this is standard protocol mongodb:// and 
  default acutal path localhost and port is 27017*/
- const uri = "mongodb://localhost:27017/project2DB";
+ const uri = "mongodb://localhost:27017/medicalPortal";
 //Database name
-const dbName = "medicalportal";
+const dbName = "medicalPortal";
 
 let db = null;
 const client = new MongoClient(uri);
